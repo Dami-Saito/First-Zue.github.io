@@ -6,7 +6,8 @@
     <title>Welcome</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <script src="script/script.js" defer></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
         </nav>
     </header>
 
-    <div class="main-showcase">
+    <div class="main-showcase" data-aos="fade-up">
         <div class="info">
             <h1>Dr. Abiodun Babatunde</h1>
             <div class="traits">
@@ -30,7 +31,9 @@
             </div>
             <a href="about.html"><button>About Abiodun Babatunde</button></a>
         </div>
-        <img src="pictures/blue native4.jpg" alt="">
+        <img data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" src="pictures/blue native4.jpg" alt="">
     </div>
 
     <div class="main">
@@ -39,8 +42,11 @@
         <div class="mn-img-div">
             <img src="pictures/middle-image.jpg" alt="main image" class="main-image">
         </div>
-        <p>Dr. Abiodun Babatunde Oluseye is a pragmatic and pro-development personality who always support good ideas and everything that enhances growth at any point in time in the journey of life.</p>
-        <a href="about.html"><button class="name-btn">Learn more</button></a>
+        <div data-aos="fade-right"
+        data-aos-duration="3000">
+            <p>Dr. Abiodun Babatunde Oluseye is a pragmatic and pro-development personality who always support good ideas and everything that enhances growth at any point in time in the journey of life.</p>
+            <a href="about.html"><button class="name-btn">Learn more</button></a>
+        </div>
     </div>
 
     <section class="vision">
@@ -48,7 +54,8 @@
 
         <h5>His Ideology</h5>
         <h3>Passion for Growth & Development</h3>
-        <p>
+        <p data-aos="fade-right"
+        data-aos-duration="3000">
             As it is known in Academic world that it is either you publish or perish, Oluseye Abiodun leaves no stone untouched and he has more than 55 academic Publications to his credit as a scholar.
             <br> <br>
             Dr. Oluseye being a developmental contagious personality, was the brain behind the execution of so many projects in the community and his work place.    
@@ -59,14 +66,14 @@
         <div class="wrapper">
             <i id="left" class="fa-solid fa-angle-left"></i>
             <div class="carousel">
-              <img src="pictures/blue native1.jpg" alt="img" draggable="false">
+              <img src="pictures/blue native1.jpg" alt="img" draggable="false" class="frs-img">
               <img src="pictures/blue suit1.jpg" alt="img" draggable="false">
               <img src="pictures/neutral 1.jpg" alt="img" draggable="false">
               <img src="pictures/shirt pics1.jpg" alt="img" draggable="false">
               <img src="pictures/blue native2.jpg" alt="img" draggable="false">
               <img src="pictures/blue suit2.jpg" alt="img" draggable="false">
               <img src="pictures/neutral 2.jpg" alt="img" draggable="false">
-              <img src="pictures/shirt pics2.jpg" alt="img" draggable="false">
+              <img src="pictures/shirt pics2.jpg" alt="img" draggable="false" class="lst-img">
             </div>
             <i class='bx bxs-chevron-right'></i>
           </div>
@@ -78,14 +85,23 @@
             <p>I</p>
             <p>All rights reserved</p>
         </div>
-        <p class="ft-web-name">AbiodunBabatunde.com</p>
+        <p class="ft-web-name">abiodunOluseye.com</p>
         <div class="socials">
             <a href="https://facebook.com/abiodunbabatundeoluseye
-            "><i class='bx bxl-facebook-square'></i></a>
-            <a href="https://www.instagram.com/abiodunbabatundeoluseye?igsh=MWt2Ymt2cm0ycG9law=="><i class='bx bxl-instagram'></i></a>
-            <a href="https://x.com/DrOluseyeA?t=xaJ-w9C77qXszrPawwFgHA&s=09"><i class='bx bxl-twitter'></i></a>
+            "><i class='bx bxl-facebook-square' style='color:#f8f8f8'></i></a>
+            <a href="https://www.instagram.com/abiodunbabatundeoluseye?igsh=MWt2Ymt2cm0ycG9law=="><i class='bx bxl-instagram' style='color:#f8f8f8'></i></a>
+            <a href="https://x.com/DrOluseyeA?t=xaJ-w9C77qXszrPawwFgHA&s=09"><i class='bx bxl-twitter' style='color:#f8f8f8'></i></a>
         </div>
-        <p class="author-work">Designed with Precision by  <span><a class="author" href="https://wa.me/message/RFTZ4T4BPGPUD1">RichWorks</a></span></p>
+        <p class="author-work">Designed with Precision by  <span><a class="author" href="https://wa.me/message/RFTZ4T4BPGPUD1">NACOS OGITECH</a></span></p>
     </footer>
+
+
+    <script src="script/script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
+

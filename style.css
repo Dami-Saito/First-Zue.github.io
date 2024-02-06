@@ -621,7 +621,7 @@ footer p {
         margin: 2px 0px;
         height: max-content;
         width: 100%;
-        border-radius: 0;
+        border-radius: 0 0 5rem 5rem;
     }
 
     .main-showcase img {

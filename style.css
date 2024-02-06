@@ -38,8 +38,16 @@
     font-size: 26px;
 }
 
+.frs-img {
+    border-radius: 50px 0 0 50px;
+}
+.lst-img {
+    border-radius: 0 50px 50px 0;
+}
+
 
 /* END */
+
 a {
     text-decoration: none;
     color: #333;
@@ -73,7 +81,7 @@ nav .nav-links a.selected {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(100vh - 80px);
+    height: 100svh;
     border-radius: 0 0 3rem 3rem;
 }
 .traits {
@@ -394,6 +402,15 @@ footer p {
         margin-bottom: 30px;
     }
 }
+
+.socials {
+    font-size: 40px;
+    color: var(--background);
+}
+
+
+
+
 @media screen and (max-width: 1200px) {
 
     .main-showcase {
@@ -424,8 +441,7 @@ footer p {
     }
 
     .main-showcase {
-        
-        height: calc(70vh - 80px);
+     height: max-content;
     }
 
     .main-showcase img {
@@ -603,14 +619,14 @@ footer p {
         justify-content: space-around;
         row-gap: 10px;
         margin: 2px 0px;
-        height: 35rem;
+        height: max-content;
         width: 100%;
         border-radius: 0;
     }
 
     .main-showcase img {
-        border-radius: 20px;
-        padding: 0 0;
+        border-radius: 90px;
+        padding: 20px 0;
         height: auto;
         width: 100%;
     }
@@ -689,7 +705,9 @@ footer p {
     background-color: #cccc;
     color: var(--text);
 }
-
+.paragraph-3 h3 {
+    text-transform: uppercase
+}
 .ekun {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -699,6 +717,7 @@ footer p {
 .ekun-h22 {
     padding: 20px 0;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .ekun img {
@@ -709,7 +728,7 @@ footer p {
     width: calc(100% / 1);
 }
 
-.yewa {
+.yewa, .oloja {
     display: grid;
     gap: 5rem;
     grid-auto-flow: column;
@@ -719,7 +738,7 @@ footer p {
     scroll-padding: 1rem;
 }
 
-.yewa > * {
+.yewa > *, .oloja > *{
     scroll-snap-align: start;
 }
 
@@ -728,18 +747,6 @@ footer p {
     object-fit: cover;
 }
 
-.oloja {
-    display: grid;
-    gap: 5rem;
-    grid-auto-flow: column;
-    grid-auto-columns: 33.3%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 1rem;
-}
-.oloja > * {
-    scroll-snap-align: start;
-}
 .oloja img {
     white-space: none;
 }
@@ -753,6 +760,18 @@ footer p {
 
 
 /* ABOUT GALLERY MEDIA QUERY */
+
+@media screen and (max-width: 1200px) {
+
+    .yewa {
+        grid-auto-columns: 50%;
+        gap: 1rem;
+    }
+    .yewa img{
+      width: 100%;
+    }
+
+}
 
 @media screen and (max-width: 900px) {
     
@@ -770,6 +789,7 @@ footer p {
 
     .olojawrapper {
         padding: 10px 40px;
+        text-transform: uppercase;
     }
     
     .firstday {
@@ -779,7 +799,7 @@ footer p {
   
   @media screen and (max-width: 768px) {
     .yewa {
-        grid-auto-columns: 100%;
+        grid-auto-columns: 70%;
         gap: 1rem;
     }
 

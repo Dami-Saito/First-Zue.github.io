@@ -5,13 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+      .scroller {
+    max-width: 100%;
+  }
+  
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .scroller__inner img {
+    max-width: 500px;
+    height: max-content;
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  
+  /* general styles */
+  
+  :root {
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-primary-100: hsl(205, 15%, 58%);
+    --clr-primary-400: hsl(215, 25%, 27%);
+    --clr-primary-800: hsl(217, 33%, 17%);
+    --clr-primary-900: hsl(218, 33%, 9%);
+  }
+
+
+  @media (max-width: 768px) {
+    
+}
+    </style>
 </head>
 <body>
     <nav class="navbar">
-        <!-- LOGO -->
         <div class="logo">Abiodun Oluseye</div>
-    
-        <!-- NAVIGATION MENU -->
+
         <ul class="nav-links">
     
           <!-- USING CHECKBOX HACK -->
@@ -21,39 +93,27 @@
           <!-- NAVIGATION MENUS -->
           <div class="menu">
     
-            <li><a class="selected" href="index.html">Welcome</a></li>
+            <li><a href="index.html">Welcome</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="selected" href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </div>
         </ul>
       </nav>
     <section class="body-work-gallery">
-        
-    </section>
-    <header>
-        <!-- <nav>
-            <div class="nav-links">
-                <a href="index.html">Welcome</a>
-                <a href="about.html">About</a>
-                <a class="selected" href="#">Gallery</a>
-                <a href="#">Contact me</a>
-            </div>
-        </nav> -->
-    </header>
 
-    <section class="image-group-one">
-            <img src="pictures/blue native3.jpg" alt="BN3" class="image-1" >
-            <img src="pictures/Rector's Welcome/DSC_8707_copy_919x613.jpg" alt="" class="image-2">
-
-            <img src="pictures/Visit to Olota Palace/DSC_2053_copy_879x586.jpg" alt="Op" class="image-3">
-            <img src="pictures/blue native4.jpg" alt="BN4" class="image-4">
-            <img src="pictures/straight shirt1.jpg" alt="st" class="image-5">
-
-            <img src="pictures/yewa awards/DSC_6699_copy_795x530.jpg" alt="yewa" class="image-6">
-            <img src="pictures/visit to ilaro palace/DSC_1985_copy_768x511.jpg" alt="IP" class="image-7">
     </section>
 
+      <div class="scroller" data-direction="right" data-speed="slow">
+        <div class="scroller__inner">
+          <img src="pictures/Rector's Welcome/DSC_8707_copy_919x613.jpg" alt="REC-images"/>
+          <img src="pictures/Visit to Olota Palace/DSC_2053_copy_879x586.jpg" alt="REC-images"/>
+          <img src="pictures/blue native3.jpg" alt="REC-images"/>
+          <img src="pictures/blue native4.jpg" alt="REC-images"/>
+          <img src="pictures/straight shirt1.jpg" alt="REC-images"/>
+          <img src="pictures/yewa awards/DSC_6699_copy_795x530.jpg" alt="REC-images"/>
+        </div>
+      </div>
 
     <footer>
         <div class="footer-in">
@@ -68,8 +128,10 @@
             <a href="https://www.instagram.com/abiodunbabatundeoluseye?igsh=MWt2Ymt2cm0ycG9law=="><i class='bx bxl-instagram' style='color:#f8f8f8'></i></a>
             <a href="https://x.com/DrOluseyeA?t=xaJ-w9C77qXszrPawwFgHA&s=09"><i class='bx bxl-twitter' style='color:#f8f8f8'></i></a>
         </div>
-        <p class="author-work">Designed with Precision by  <span><a class="author" href="https://wa.me/message/RFTZ4T4BPGPUD1">NACOS OGITECH</a></span></p>
+        <p class="author-work">Designed with Precision by  <span><a class="author" href="https://nacosogitech.com.ng">NACOS OGITECH</a></span></p>
     </footer>
 
+    <script src="script/gallery.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

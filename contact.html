@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <style>
+            .contact-container {
+                padding: 50px;
+            }
+
+            .contact-container h2 {
+                font-size: 40px;
+            }
+
+            .contact-container h3 {
+                font-size: 30px;
+                padding: 15px 0;
+            }
+
+            .contact-container p {
+                text-align: justify;
+                font-size: 27px;
+                line-height: 2.8rem;
+            }
+
+            .contact-container img {
+                display: flex;
+                justify-content: center;
+                border-radius: 0 4rem 0 4rem;
+                width: 100%;
+                height: 100%;
+            }
+
+            .social__links {
+                display: flex;
+                font-size: 46px;
+                justify-content: center;
+                gap: 20px;
+                padding-top: 10px;
+            }
+
+            .contact__flex {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                background-color: #ccc;
+                padding: 25px;
+                border-radius: 0 5rem 0 5rem;
+            }
+
+            @media (max-width: 768px) {
+                .contact-container {
+                    padding: 30px;
+                }
+
+                .contact__flex {
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <nav class="navbar">
+            <div class="logo">Abiodun Oluseye</div>
+                <ul class="nav-links">
+        
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox"id="checkbox_toggle" />
+                <label for="checkbox_toggle"class="hamburger"> &#9776;</label>
+        
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+        
+                    <li><a href="index.html">Welcome</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a class="selected" href="contact.html">Contact</a></li>
+                </div>
+                </ul>
+        </nav>
+
+        <section class="body-work">
+
+            <div class="contact-container">
+                <h2>Let's Connect</h2>
+                <div class="contact__flex">
+                    <img src="pictures/middle-image.jpg" alt="nice-one">
+
+                    <div>
+                        <h3>I'm Abiodun Babatunde Oluseye.</h3>
+                        <p>&nbsp;&nbsp;&nbsp;highly experienced academic leader and administrator with a wealth of experience in academia and a passion for growth and development, Dr. Oluseye welcomes discussions on education, research, and community initiatives, connect with him to explore ideas, partnerships, or speaking engagements in the field of education and development.</p>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="social__links">
+                    <a href="https://facebook.com/abiodunbabatundeoluseye
+                    "><i class='bx bxl-facebook-square' style='color:#771fa3'></i></a>
+                    <a href="https://www.instagram.com/abiodunbabatundeoluseye?igsh=MWt2Ymt2cm0ycG9law=="><i class='bx bxl-instagram' style='color:#771fa3'></i></a>
+                    <a href="https://x.com/DrOluseyeA?t=xaJ-w9C77qXszrPawwFgHA&s=09"><i class='bx bxl-twitter' style='color:#771fa3'></i></a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer>
+            <div class="footer-in">
+                <p>Copyright &copy2024</p>
+                <p>I</p>
+                <p>All rights reserved</p>
+            </div>
+            <p class="ft-web-name">abiodunOluseye.com</p>
+            <p class="author-work">Designed with Precision by  <span><a class="author" href="https://nacosogitech.com.ng">NACOS OGITECH</a></span></p>
+        </footer>
+    </body>
+
+</html>

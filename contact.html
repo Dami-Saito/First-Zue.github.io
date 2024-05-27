@@ -24,18 +24,23 @@
             }
 
             .contact-container p {
-                text-align: justify;
+                text-align: center;
                 font-size: 27px;
                 line-height: 2.8rem;
+                word-spacing: 0.1rem;
             }
 
             .contact-container img {
                 display: flex;
                 justify-content: center;
-                border-radius: 0 4rem 0 4rem;
                 width: 100%;
                 height: 100%;
             }
+
+            .footer-in p {
+                padding-bottom: 0;
+            }
+
 
             .social__links {
                 display: flex;
@@ -55,14 +60,56 @@
                 border-radius: 0 5rem 0 5rem;
             }
 
+            @media (max-width: 1200px) {
+                .contact-container img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 0 0 0 4rem;
+                    object-fit: cover;
+                }
+            }
+
+            @media (max-width: 1000px) {
+                .contact-container img {
+                    object-position: -370px 0px;
+                }
+            }
+            @media (max-width: 800px) {
+                .contact-container img {
+                    object-position: -500px 0px;
+                }
+            }
+
             @media (max-width: 768px) {
+                .contact-container img {
+                    border-radius: 0 4rem 0 4rem;
+                    object-fit: contain;
+                    object-position: 0;
+
+                }
+
                 .contact-container {
-                    padding: 30px;
+                    padding: 20px;
                 }
 
                 .contact__flex {
                     display: block;
+                    padding: 13px;
+                    margin-top: 10px;
                 }
+
+                .contact-container p {
+                    font-size: 1.2rem;
+                }
+
+                .contact-container h3 {
+                    font-size: 23px;
+                }
+
+                .social__links {
+                    font-size: 30px;
+                }
+
             }
         </style>
     </head>
@@ -97,7 +144,7 @@
 
                     <div>
                         <h3>I'm Abiodun Babatunde Oluseye.</h3>
-                        <p>&nbsp;&nbsp;&nbsp;highly experienced academic leader and administrator with a wealth of experience in academia and a passion for growth and development, Dr. Oluseye welcomes discussions on education, research, and community initiatives, connect with him to explore ideas, partnerships, or speaking engagements in the field of education and development.</p>
+                        <p>Highly experienced academic leader and administrator with a wealth of experience in academia and a passion for growth and development, Dr. Oluseye welcomes discussions on education, research, and community initiatives, connect with him to explore ideas, partnerships, or speaking engagements in the field of education and development.</p>
                     </div>
                     
                 </div>

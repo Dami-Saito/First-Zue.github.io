@@ -102,7 +102,6 @@ a {
   }
   
 .menu li:hover {
-  background-color: var(--primary);
   border-radius: 5px;
   transition: 0.3s ease;
 }
@@ -128,7 +127,7 @@ input[type=checkbox] {
   /* APPLYING MEDIA QUERIES */
   @media (max-width:768px) {
 
-   .menu li a{
+   .menu li a {
     color: white;
     font-weight: 200;
    }
@@ -145,8 +144,11 @@ input[type=checkbox] {
   
     .menu li:hover {
       display: inline-block;
-      background-color: var(--accent);
       transition: 0.3s ease;
+    }
+
+    .menu li a.selected:hover {
+        color: white;
     }
   
     .menu li + li {
@@ -180,24 +182,21 @@ input[type=checkbox] {
     padding: 40px 0;
 }
 
-/* nav .nav-links {
-    display: flex;
-    gap: 80px;
-}*/
-
 .menu  li a {
     transition: color 0.3 ease;
 }
 
 .menu li a.selected,
-.logo {
-    color: var(--text);
+.menu li a:hover {
+    color: yellowgreen;
+    font-weight: 800;
 } 
 
-.menu li a.selected:hover,
-.menu li a:hover {
-    color: white;
+.menu li a.selected:hover {
+    color: #333;
+    font-weight: 800;
 }
+
 
 .main-showcase {
     background-color: var(--showcase-purple);
@@ -773,7 +772,7 @@ footer p {
     .ft-web-name,
     .author-work {
         padding-bottom: 10px;
-        font-size: 17px;
+        font-size: 15px;
     }
 }
 

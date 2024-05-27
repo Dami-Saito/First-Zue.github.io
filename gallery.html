@@ -76,7 +76,21 @@
 
 
   @media (max-width: 768px) {
-    
+    .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      red 20%,
+      red 80%,
+      transparent
+    );
+    mask: linear-gradient(90deg,white 20%, red 80%);
+  }
+
+  footer {
+    margin-top: 40px;
+    }
 }
     </style>
 </head>
@@ -106,11 +120,11 @@
 
       <div class="scroller" data-direction="right" data-speed="slow">
         <div class="scroller__inner">
-          <img src="pictures/Rector's Welcome/DSC_8707_copy_919x613.jpg" alt="REC-images"/>
-          <img src="pictures/Visit to Olota Palace/DSC_2053_copy_879x586.jpg" alt="REC-images"/>
-          <img src="pictures/blue native3.jpg" alt="REC-images"/>
-          <img src="pictures/blue native4.jpg" alt="REC-images"/>
-          <img src="pictures/straight shirt1.jpg" alt="REC-images"/>
+          <img src="pictures/Commisioner.jpg" alt="REC-images"/>
+          <img src="pictures/quantum (1).jpg" alt="REC-images"/>
+          <img src="pictures/with king.jpg" alt="REC-images"/>
+          <img src="pictures/quantum (3).jpg" alt="REC-images"/>
+          <img src="pictures/REC-Sm2.jpg" alt="REC-images"/>
           <img src="pictures/yewa awards/DSC_6699_copy_795x530.jpg" alt="REC-images"/>
         </div>
       </div>
